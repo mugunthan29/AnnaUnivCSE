@@ -1,0 +1,40 @@
+(12) PATENT APPLICATION PUBLICATION (21) Application No.202411024874 A
+(19) INDIA
+(22) Date of filing of Application :27/03/2024 (43) Publication Date : 07/11/2025
+(54) Title of the invention : TODDLER HOLDING AND RESTING ASSISTIVE DEVICE
+(51) International classification
+:F16D0027105000,
+A61G0005100000,
+G02B0023240000,
+G01N0015140000,
+F16D0121220000
+(31) Priority Document No :NA
+(32) Priority Date :NA
+(33) Name of priority country :NA
+(86) International Application No
+ Filing Date
+:NA
+:NA
+(87) International Publication No : NA
+(61) Patent of Addition to Application Number
+ Filing Date
+:NA
+:NA
+(62) Divisional to Application Number
+ Filing Date
+:NA
+:NA
+(71)Name of Applicant :
+ 1)Chandigarh University
+ Address of Applicant :National Highway 95, Chandigarh-Ludhiana Highway,
+Mohali, Punjab 140413, India. Mohali Punjab India
+ 2)Chandigarh University Technology Business Incubator
+(72)Name of Inventor :
+ 1)Manjot Kaur
+(57) Abstract :
+A toddler holding and resting assistive device, comprises of a frame developed to be positioned in contact with hand rest of a wheelchair, a pair of L-shaped telescopic
+rods 1 to extends/retract an extendable rectangular plate 4 for allowing a user seated over the wheelchair to accommodate a toddler, plurality of electromagnetic clamps
+2 for securing the frame with the wheelchair, an electromagnetic spring 3 for absorbing sudden jerks and movements, an artificial intelligence based imaging unit 5 for
+capturing and processing multiple images of the frame, plurality of primary motorized hinges 6 to modulate shape of the platform as per shape of the toddler’s back
+portion, a microphone for enabling the user to give input commands, a secondary motorized hinge 7 attached with a curved shaped member 8 for tilting the member 8, a
+laser emitter o emit laser beam of light in direction of the flies/mosquitoes.

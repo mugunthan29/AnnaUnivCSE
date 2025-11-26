@@ -1,0 +1,197 @@
+Invention Title	AN AUTOMATED SYSTEM AND METHOD FOR PREDICTING THE WORKPLACE STRESS IMPACT ON EMPLOYEES’ WELL-BEING
+Publication Number	46/2025
+Publication Date	14/11/2025
+Publication Type	INA
+Application Number	202531105392
+Application Filing Date	31/10/2025
+Priority Number	
+Priority Country	
+Priority Date	
+Field Of Invention	COMPUTER SCIENCE
+Classification (IPC)	G06Q10/105, G06Q10/0639, G06N20/00&#x0D; &#x0D; &#x0D;
+
+
+Abstract:
+
+The present invention pertains to an automated syetm and method (100) for predicting the impact of workplace stress on employees’ well-being using a processing unit. The method (100) involves receiving (10) structured employee well-being data comprising workplace and environmental factors , followed by preprocessing(20) to remove identifiers, normalize features, encode categorical variables, and convert happiness scores into a binary classification of happy or unhappy. A plurality of input features and a target variable corresponding to employee happiness is then defined(30) and data is split (40) into training and testing datasets. A machine learning model is trained (50) on the training dataset to capture non-linear relationships between workplace factors and employee well-being, and evaluated (60) on the testing dataset. The model predicts (70) employee happiness to assess accuracy and generate classification reports. The method (100) enables early detection of dissatisfaction and supports actionable interventions to improve workplace satisfaction.
+
+
+Description:FIELD OF INVENTION:
+	The present invention generally relates to human resource management. More specifically, the present invention relates to an automated system and method for predicting the impact of workplace stress on employees’ well-being, enabling real-time evaluation of employee satisfaction and early detection of potential dissatisfaction.
+
+BACKGROUND AND PRIOR ART:
+	In the modern workplace, employee well-being plays a critical role in productivity, engagement, and organizational success.In many industries, increasing workloads, job insecurity, and challenging work environments contribute to rising levels of workplace stress. If such stress is not identified and addressed promptly, it can result in declining productivity, reduced employee engagement, and higher turnover rates.If left unaddressed, such stress can lead to reduced productivity, diminished morale, and increased turnover, ultimately affecting overall business performance.
+
+	Traditional methods for assessing employee well-being and satisfaction typically involve periodic surveys, manual evaluations, or generalized human resource analytics. While these methods may provide some insights, they are often time-consuming, prone to human bias, and limited to historical or infrequent data points. As a result, organizations may fail to identify early warning signs of dissatisfaction, preventing timely intervention.
+
+	 Moreover, many organizations lack the ability to integrate diverse data sources in real time, limiting their capacity to respond quickly to emerging issues. This gap underscores the need for intelligent, automated systems that can analyze multiple factors simultaneously and provide early warnings about employee dissatisfaction.
+
+	EP3716151A1 describes a computer-implemented method designed to determine and indicate a person’s long-term stress level using a data processing unit. The method begins with the acquisition of stressor data, which consists of a collection of stressor data items representing different factors that can contribute to stress. These data items may be obtained from various sources, such as sensors or user-provided inputs. Once collected, the stressor data values are analyzed through an artificial neural network (ANN). The ANN is trained to process the stressor data values in conjunction with an indication of the person’s previous stress state. By considering both current and historical stress-related information, the ANN generates output data that represents the calculated stress level of the individual. This allows the system to account for temporal patterns and long-term trends in stress rather than focusing solely on momentary conditions.
+
+	U. Srinivasulu Reddy et al. “Machine Learning Techniques for Stress Prediction in Working Employees” aims to use machine learning methods to analyze and predict stress patterns among working IT professionals, to identify key factors that contribute to stress levels. In this study, machine learning techniques are applied to examine stress patterns in working adults and identify the key factors that significantly influence stress levels. The research uses data from the 2017 OSMI mental health survey, focusing on responses from professionals in the tech industry. After cleaning and preprocessing the data, various machine learning models were trained and their accuracy compared. Among the tested models, boosting achieved the highest accuracy. Decision tree analysis revealed that gender, family medical history, and the availability of mental health benefits at work are the most influential factors. The findings can help organizations refine their strategies to reduce stress and create a more supportive work environment for employees. (December 2018, 2018 IEEE International Conference on Computational Intelligence and Computing Research (ICCIC),  doi: 10.1109/ICCIC.2018.8782395)
+	Cheng Ding et al. “A systematic hybrid machine learning approach for stress prediction” focuses on developing a hybrid model (HB) that combines a Gradient Boosting Machine (GBM) and a Random Forest (RF) using soft voting. In soft voting, each model contributes probability scores for each class, and the final prediction is based on the class with the highest combined probability. By integrating these two methods, the system aims to improve classification accuracy and reliability compared to using either technique individually. The model is trained on a portion of the dataset and validated using standard metrics such as accuracy, precision, recall, and F1-score, with results indicating superior performance over baseline machine learning models. The study is based on data from previous research and focuses on predicting multiple stress levels. The hybrid model is particularly effective for small datasets and low computational cost compared to deep learning models. (February 2023, PeerJ Comput Sci.,  doi:  10.7717/peerj-cs.1154)
+
+	The abovementioned prior arts focus on stress detection or prediction using various machine learning techniques. However, none of them disclose an automated system specifically designed to predict the impact of workplace stress on employees’ overall well-being. Furthermore, none of these prior arts provide a real-time automated solution capable of continuously evaluating employee well-being, identifying early signs of dissatisfaction, and predicting potential performance issues or attrition risks.
+
+	Thus, there exists a need for a real-time, automated, and data-driven system capable of evaluating the well-being of employees by identifying the impact of workplace stress and predicting potential dissatisfaction before it adversely affects performance or retention.
+
+OBJECTS OF THE INVENTION:
+	The primary object of the present invention is to provide an automated system and method for predicting the impact of workplace stress on employees’ well-being.
+
+	Another object of the present invention is to identify potential dissatisfaction among employees before it affects performance or leads to attrition.
+
+	Yet another object of the present invention is to incorporate structured workplace data and machine learning techniques for the accurate prediction of employee happiness.
+
+	Further, an object of the present invention is to help organizations proactively detect dissatisfaction, uncover root causes, and implement timely interventions to improve workforce morale and retention.
+
+	Another object of the present invention is to assess multiple workplace factors, including salary, job security, mental stress levels, workplace environment, sociocultural inclusion, and health benefits for generating a comprehensive evaluation of employee well-being.
+
+SUMMARY OF THE INVENTION:
+	The present invention pertains to an automated system and method for predicting the impact of workplace stress on employees’ well-being, which is designed to evaluate employee satisfaction in real time and identify potential dissatisfaction before it affects performance or retention.
+
+	In an aspect of the present invention, the method for predicting workplace stress impacts on employee well-being using machine learning comprises receiving structured employee data encompassing workplace and environmental factors, preprocessing the data by removing identifiers, normalizing features, encoding categorical variables, and transforming happiness scores into binary categories, defining input features (X) and target variables (Y), splitting data into training and testing sets, and training a machine learning model to capture non-linear relationships between workplace factors and well-being, evaluating the trained machine learning model on the testing dataset, and predictions generate accuracy metrics and classification reports.
+
+	In an aspect of the present invention, the structured employee data is derived through a survey platform.
+
+	In an aspect of the present invention, the workplace and environmental attributes include base salary, professional experience, compensation satisfaction, workplace conditions, perceived discrimination, pollution exposure, health benefits, stress levels, and overall sense of well-being.
+
+	In an aspect of the present invention, the categorical variable, such as gender, is converted into numerical form through one-hot encoding.
+
+	In an aspect of the present invention, the transforming happiness scores into a binary happiness category comprises: i) assigning a "Happy" classification to scores above 5 on a 10-point scale, ii) assigning an "Unhappy" classification to scores of 5 or below.
+
+	In an aspect of the present invention, the machine learning model is a Random Forest Classifier, which is trained with workplace-specific hyperparameters.
+
+	In an aspect of the present invention, the automated system for predicting the impact of workplace stress on employees’ well-being, comprising a data collection unit configured to obtain structured employee data, a preprocessing module configured to: i) remove non-essential identifiers, ii)convert categorical variables into numerical form through one-hot encoding, iii)normalize input features into a standardized scale, iv) discretize employee happiness into binary classes, a machine learning model configured to predict employee happiness based on said structured data,a processing unit configured to execute data preprocessing, model training, and processing computational instructions,a memory unit configured to store employee datasets, model  parameters, and prediction results;a display interface configured to present prediction outcomes through visual dashboards.
+
+BRIEF DESCRIPTION OF DRAWINGS:
+
+	The invention has other advantages and features which will be more readily apparent from the following detailed description of the invention and the appended claims, when taken in conjunction with the accompanying drawings, in which:
+Fig. 1 illustrates the flow chart of the method for predicting the impact of workplace stress on employees’ well-being.
+
+DETAILED DESCRIPTION OF THE INVENTION:
+	The invention is described herein in detail with the help of figures appended at the end of the specification. The figures illustrate the preferred embodiment as well as other embodiments that define the scope of the present invention. However, it may be understood that the figures presented herein are intended to exemplify the scope of the invention only. The person skilled in art may note that by no means the figures limit the scope of the invention. Any variation in the drawings by any other person will be falling in the scope of the present invention.
+
+	Throughout the specification and claims, the following terms take the meanings explicitly associated herein unless the context clearly dictates otherwise. The meaning of "a", "an", and "the" include plural references. The meaning of "in" includes "in" and "on." Referring to the drawings, like numbers indicate like parts throughout the views. Additionally, a reference to the singular includes a reference to the plural unless otherwise stated or inconsistent with the disclosure herein.
+	The term ‘One-hot encoding’ in the following description refers to the technique used in machine learning to convert categorical data into a numerical format that machine learning algorithms can understand. 
+
+	The term ‘Normalization’ in the following description refers to the process of scaling all numerical input features within a uniform range to ensure that no single attribute disproportionately affects the machine learning model. 
+
+	The present invention discloses an automated system and method for predicting the impact of workplace stress on employees’ well-being, providing real-time evaluation of employee satisfaction and early detection of potential dissatisfaction. The system leverages structured employee data and applies a supervised machine learning algorithm to evaluate overall employee happiness and identify potential dissatisfaction in real time.
+
+	Fig. 1 illustrates the flow chart of the method(100) for predicting the impact of workplace stress on employees’ well-being., which is implemented through a processing unit.The method (100) begins with receiving(10) a set of structured employee well-being data. This dataset comprises both workplace factors and environmental parameters such as base salary, years of professional experience, level of satisfaction with compensation and perks, quality of workplace conditions, perceived discrimination at the job site, exposure to pollution, availability of health benefits, experienced stress levels, and overall self-reported sense of well-being. This data is collected using structured digital questionnaires. Once received, the structured employee data is preprocessed through a processing unit. Preprocessing (20) of data includes removing identifiers such as employee name, department, or email address, ensuring confidentiality and minimizing bias, normalizing numerical features into a uniform numerical format e.g., 1-to-10 scale to allow equal weighting of attributes during analysis, encoding categorical attributes such as gender into numerical vectors using one-hot encoding, ensuring compatibility with supervised learning models, transforming happiness scores into a binary classification problem in which scores above a predetermined threshold e.g., >5 are categorized as “happy,” and scores equal to or below the threshold are categorized as “unhappy”. Following preprocessing, the method further includes defining (30) of plurality of input features (X) based on the workplace and environmental factors. Concurrently, a target variable (Y) is defined, which is the dependent variable corresponding to the binary happiness category. The preprocessed structured data is then partitioned(40) into a training dataset and a testing dataset. The model is trained using 80% of the dataset, while the remaining 20% is reserved for validation and testing. The training dataset is subsequently used for training(50) a machine learning model. Upon training, the model is evaluated(60) using the testing dataset. The trained and validated model is then employed to predict(70) employee happiness based on the testing dataset. The prediction results provide not only a binary classification of employees as happy or unhappy but also detailed classification reports that identify patterns and provide the most influential workplace factors contributing to dissatisfaction.
+
+	The automated system for predicting the impact of workplace stress on employees’ well-being comprises a data collection unit that acquires structured employee data encompassing quantifiable information on key workplace factors such as base salary, years of professional experience, satisfaction with compensation and perks, workplace conditions, perceived discrimination at the job site, exposure to pollution, availability of health benefits, experienced stress levels, and an overall sense of well-being. This raw data is then passed to a preprocessing module. First, it removes non-essential identifiers to ensure complete employee anonymity and data privacy. Next, it converts categorical variables, such as gender role, into a numerical format using a standard technique like one-hot encoding, which makes the data readable for the machine learning algorithm. The module also normalizes input features by scaling them to a uniform range, e.g., scaling stress levels and compensation satisfaction to a standardized 1-10 range. Finally, it discretizes employee happiness into two categories: “happy” for scores above 5 and “unhappy” for scores of 5 or below. The preprocessed data is then fed into the machine learning model, which is executed by the processing unit. This model, configured to learn from the structured data, analyzes the relationships between the various workplace factors and employee well-being to generate an accurate and automated prediction of an employee's happiness level. The system further comprises a processing unit, which is used to execute data preprocessing, train the machine learning model, and perform prediction operations. A memory unit stores the employee datasets, preprocessed data, model parameters, and prediction results. A display interface presents the prediction outcomes through visual dashboards.
+
+EXPERIMENTAL DETAILS AND RESULTS:
+	The experimental evaluation of the proposed automated system and method for predicting the impact of workplace stress on employees’ well-being was conducted using structured survey data collected from more than 1,000 employees. The dataset included attributes such as salary, years of experience, perceived discrimination, availability of benefits, experienced stress levels, and self-reported happiness scores on a scale of 1 to 10. During preprocessing, all identifiers were removed to ensure anonymity, categorical variables were encoded using one-hot encoding, and numerical features were normalized to a 0–1 range. Employee happiness was then classified into binary categories of “happy” and “unhappy.” The model was trained using a Random Forest Classifier configured with 100 estimators and Gini impurity as the splitting criterion, employing an 80:20 training-to-testing data split. The model achieved an accuracy of 91.6%, precision of 90.4%, and recall of 92.1%, with an average execution time of less than two seconds. The outcomes enabled early detection of employee dissatisfaction and supported HR interventions such as stress management initiatives and compensation reviews.
+
+
+
+	Table 1: Characteristics of a machine learning model
+Metric	Description	Result
+Model Type	Supervised Classification	Random forest Classifier
+Input Data	Structure data from employee	Age, salary, Experience, etc.
+Preprocessing	Column Removal, One-hot encoding, label conversion	Applied
+ Target Variable	Employee happiness (binary classification:
+Happy / Unhappy)	Happy (>5), 
+Unhappy (≤5)
+Training data split	Portion of data used to train the model	80%
+Test data split	Portion of data used to validate model performance	20%
+Accuracy	Percentage of correctly classified samples on test set	>90%
+Prediction Output	Happiness classification for new individual inputs	Happy or Unhappy
+Execution time	Time taken to train and test the model	Fast (< 2 seconds)
+Scalability	Can handle additional employee records without performance loss	High
+
+	Table 1 summarizes the key metrics and characteristics of a machine learning model designed to predict employee happiness.The model type is a supervised classification approach, specifically a Random Forest Classifier, which processes structured employee data such as age, salary, and experience. The preprocessing stage includes column removal, one-hot encoding of categorical variables, and conversion of happiness scores into binary labels. The target variable is employee happiness, defined as Happy for scores greater than 5 and Unhappy for scores less than or equal to 5. The dataset is split into 80% training data and 20% testing data to ensure reliable performance evaluation. The model achieves an accuracy exceeding 90% on the test set, with execution time being less than 2 seconds, thus making it suitable for real-time applications. The output of the prediction is a binary classification indicating whether an employee is happy or unhappy. The system demonstrates high scalability, being capable of handling additional employee records without any loss in performance.
+
+	In a preferred embodiment of the present invention, the machine learning model is used as a Random Forest classifier, an ensemble learning algorithm capable of capturing complex, non-linear interactions among workplace and environmental variables.
+
+	In the preferred embodiment, the automated system for predicting the impact of workplace stress on employees’ well-being is implemented as a web-based cloud application, hosted on secure servers and capable of performing real-time analysis of employee well-being data. Alternatively, the system can be deployed as a standalone desktop application that operates offline, providing local analysis suitable for environments with restricted network access.
+
+	In an embodiment of the present invention, the proposed system provides data-driven insights that extend beyond the capabilities of traditional HR tools. It generates real-time alerts for employee dissatisfaction, identifies root causes of workplace stress, and offers personalized intervention suggestions for human resources. Additionally, the system continuously improves its predictive capabilities through model updates.
+
+	In an embodiment of the present invention, the method(100) enables early detection of employee dissatisfaction. By analyzing prediction outcomes, organizations can proactively identify sources of stress, discrimination, poor workplace conditions, or inadequate benefits.
+	In one embodiment of the present invention, the normalization is performed using either Min–Max normalization or Z-score standardization.
+Min–Max normalization:
+This method rescales all values of a feature to a fixed range, usually 0 to 1.
+ 
+Where, x = original value
+ x_min= smallest value of that feature
+ x_max= largest value of that feature
+ x^'= new standardized value
+
+Z-score normalization:
+This method transforms the data to have a mean of 0 and a standard deviation of 1. It centers the data around the mean (0) and scales it by the standard deviation. 
+ 
+
+Where,x= original value
+μ= mean (average) of that feature
+σ= standard deviation of that feature
+x^'= new standardized value
+
+The normalization process ensures that all workplace parameters, such as salary, experience, and stress level, contribute equally to the model training process, thereby preventing bias toward variables with larger numerical values and improving model stability and prediction accuracy.
+	In an embodiment of the present invention, the Random Forest Classifier is implemented with a plurality of hyperparameters, such as the number of estimators, splitting criterion, maximum depth, and other parameters, which can be varied as per dataset characteristics. The plurality of hyperparameters includes 100 estimators, Gini index as criterion, no restriction on maximum depth, and square root selection of features, which yielded accuracy greater than 90%.
+	In an embodiment of the present invention, the  Random Forest Classifier is trained using supervised learning on structured employee data. The dataset is divided into 80% for training and 20% for testing. Input features (X) include workplace and environmental attributes such as salary, years of experience, and stress levels, while the target variable (Y) corresponds to employee happiness, classified into binary categories of “happy” and “unhappy.”
+The Random Forest model is configured with the following parameters:
+i) n_estimators: 100
+This parameter shows the number of decision trees the random forest builds.
+ii) criterion: Gini impurity
+The Gini impurity is used to measure the quality of a split.
+iii) max_depth: None
+This parameter allows each tree to grow fully independent.
+iv) max_features: sqrt
+This parameter specifies that a random subset of features, equal to the square root of the total number of input features.
+The model generates multiple decision trees to learn patterns in the data. Upon evaluation, the trained model achieves prediction accuracy greater than 90%
+
+	In a further embodiment of the present invention, the incorporation of a Random Forest model enhances the predictive performance of the system due to its ensemble-based structure and robustness. The model effectively captures non-linear relationships among workplace factors, ranks feature importance to support decision-making, and demonstrates strong resistance to noise and overfitting. Furthermore, it achieves high prediction accuracy exceeding 90% with a rapid execution time of less than 2 seconds. The Random Forest model is also highly scalable, enabling efficient processing and analysis of large employee datasets for reliable prediction of workplace stress impact on overall well-being.
+
+	In an embodiment of the present invention, the machine learning model is trained using 80% of the dataset, while the remaining 20% is reserved for validation and testing. 
+
+	In an embodiment of the present invention, the structured employee data is derived through a survey platform.
+
+	In an embodiment of the present invention, the workplace and environmental attributes include base salary, professional experience, compensation satisfaction, workplace conditions, perceived discrimination, pollution exposure, health benefits, stress levels, and overall sense of well-being.
+
+	In an embodiment of the present invention, the method (100) is implemented using a processing unit that executes the instructions for receiving, preprocessing, training, and predicting stages. The processing unit can be a microprocessor, microcontroller, cloud-based computing server, or personal computer system configured with data processing and machine learning capabilities.
+                                                                                                                       
+	Although a particular exemplary embodiment of the invention has been disclosed in detail for illustrative purposes, it will be recognized by those skilled in the art that variations or modifications of the disclosed invention, including the rearrangement in the configurations of the parts, changes in steps and their sequences may be possible. Accordingly, the invention is intended to embrace all such alternatives, modifications, and variations as may fall within the scope of the present invention.
+
+	The foregoing descriptions of specific embodiments of the present invention have been presented for purposes of illustration and description. They are not intended to be exhaustive or to limit the invention to the precise forms disclosed, and obviously many modifications and variations are possible in light of the above teaching.
+
+ADVANTAGES OF THE INVENTION:
+
+	The present invention provides an automated system and method for predicting the impact of workplace stress on employees’ well-being that enables proactive identification of dissatisfied employees before stress impacts productivity or leads to attrition.
+	The present invention provides an automated system and method for predicting the impact of workplace stress on employees’ well-being that provides accurate predictions of employee happiness. 
+	The present invention provides an automated system and method for predicting the impact of workplace stress on employees’ well-being that transforms subjective feedback into actionable insights, enabling real-time classification of well-being. 
+	The present invention provides an automated system and method for predicting the impact of workplace stress on employees’ well-being that allows organizations to proactively detect dissatisfaction, interpret key influencing factors, and take timely HR actions. 
+ , Claims:1.	A method(100) for predicting the impact of workplace stress on employees’ well-being by means of a processing unit, comprising:
+i.	receiving(10) a set of  structured employee well-being data, said data comprising workplace and environmental factors;
+ii.	preprocessing(20) said structured employee data by removing identifiers, normalizing all features into a uniform numerical format, encoding categorical variables into numerical form and transforming the happiness scores into a binary happiness category of happy or unhappy;
+iii.	defining(30) a plurality of input features (X) based on the preprocessed workplace and environmental factors, and defining a target variable (Y) corresponding to the binary happiness category;
+iv.	splitting(40) the preprocessed structured data into a training dataset and a testing dataset;
+v.	training(50) a machine learning model using said training dataset to capture non-linear relationships between workplace factors and employee well-being;
+vi.	evaluating(60) the trained machine learning model on the testing dataset;
+vii.	predicting(70) employee happiness based on the testing dataset to determine prediction accuracy and classification reports;
+wherein, the method(100) adapted to enable early detection of employee dissatisfaction and actionable intervention recommendations for improving workplace satisfaction.
+2.	The method (100) as claimed in claim 1, wherein the structured employee data is derived through a survey platform.
+
+3.	The method (100) as claimed in claim 1, wherein the workplace and environmental attributes include base salary, professional experience, compensation satisfaction, workplace conditions, perceived discrimination, pollution exposure, health benefits, stress levels, and overall sense of well-being.
+
+4.	The method (100) as claimed in claim 1, wherein the categorical variable, such as gender, is converted into numerical form through one-hot encoding.
+
+5.	The method (100) as claimed in claim 1, wherein the transforming happiness scores into a binary happiness category comprises:
+i)	assigning a "Happy" classification to scores above 5 on a 10-point scale; 
+ii)	assigning an "Unhappy" classification to scores of 5 or below.
+
+6.	The method (100) as claimed in claim 1, wherein the machine learning model is a Random Forest Classifier, which is trained with workplace-specific hyperparameters.
+
+7.	An automated system for predicting the impact of workplace stress on employees’ well-being, comprising:
+                   a) a data collection unit configured to obtain structured employee     data;
+                   b) a preprocessing module configured to:
+i)	remove non-essential identifiers,
+ii)	convert categorical variables into numerical form through one-hot encoding,
+iii)	normalize input features into a standardized scale,
+iv)	discretize employee happiness into binary classes;
+       c) a machine learning model configured to predict employee happiness based on said structured data;
+      d) a processing unit configured to execute data preprocessing, model training, and processing computational instructions;
+      e) a memory unit configured to store employee datasets, model  parameters, and prediction results;
+      f) a display interface configured to present prediction outcomes through visual dashboards.

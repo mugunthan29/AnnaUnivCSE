@@ -1,0 +1,39 @@
+(12) PATENT APPLICATION PUBLICATION (21) Application No.202411024868 A
+(19) INDIA
+(22) Date of filing of Application :27/03/2024 (43) Publication Date : 07/11/2025
+(54) Title of the invention : WALL FIXING DEVICE
+(51) International classification
+:G06F0003160000,
+G10L0015220000,
+A45C0007000000,
+B25J0009160000,
+H01M0010340000
+(31) Priority Document No :NA
+(32) Priority Date :NA
+(33) Name of priority country :NA
+(86) International Application No
+ Filing Date
+:NA
+:NA
+(87) International Publication No : NA
+(61) Patent of Addition to Application Number
+ Filing Date
+:NA
+:NA
+(62) Divisional to Application Number
+ Filing Date
+:NA
+:NA
+(71)Name of Applicant :
+ 1)Chandigarh University
+ Address of Applicant :National Highway 95, Chandigarh-Ludhiana Highway,
+Mohali, Punjab 140413, India. Mohali Punjab India
+ 2)Chandigarh University Technology Business Incubator
+(72)Name of Inventor :
+ 1)Dr. Aditya Kumar Tiwary
+(57) Abstract :
+A wall fixing device, comprises of a telescopic handle 2 with a soft padding for a user to acquire a grip onto, a container 6 attached to the rectangular plate 1 for storing
+a putty material and a robotic arm attached to the rectangular plate 1 having an applying plate 1 at its end for applying putty material on the wall from the container 6, a
+robotic link 3 attached to the rectangular plate 1, an artificial intelligence-based imaging unit 4 to determine if a wall surface is flat or a corner, a sensing module, an
+ultrasonic sensor for detecting the unwanted material and the damage on the wall surface, and a microphone 5 for receiving audio commands from the user to trigger the
+microcontroller.
